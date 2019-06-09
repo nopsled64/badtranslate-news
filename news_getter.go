@@ -25,7 +25,7 @@ type Item struct {
 	XMLName     xml.Name `xml:"item"`
 	Title       string   `xml:"title"`
 	Description string   `xml:"description"`
-	pubDate     string   `xml:"pubDate"`
+	PubDate     string   `xml:"pubDate"`
 }
 
 //function inspired by https://tutorialedge.net/golang/parsing-xml-with-golang/
