@@ -31,7 +31,7 @@ type Item struct {
 //function inspired by https://tutorialedge.net/golang/parsing-xml-with-golang/
 func getNewsRSS() (RSS, error) {
 	var rss RSS
-
+	// alt feeds.bbci.co.uk/news/technology/rss.xml
 	if data, err := getContent("http://feeds.bbci.co.uk/news/politics/rss.xml"); err != nil {
 		log.Printf("Failed to get XML: %v", err)
 		return rss, err

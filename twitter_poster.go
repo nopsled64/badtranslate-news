@@ -19,6 +19,7 @@ type TwitterConfig struct {
 
 func readTwitterConfig(f string) TwitterConfig {
 	file, _ := os.Open(f)
+	// REMEMBER TO PUT AN ERROR CATCHING ROUTINE HERE
 	defer file.Close()
 
 	decoder := json.NewDecoder(file)
@@ -28,7 +29,7 @@ func readTwitterConfig(f string) TwitterConfig {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
-	//fmt.Println(twitterConfig.AccessSecret) // output: [UserA, UserB]
+	//fmt.Println(twitterConfig.AccessSecret)
 
 	return twitterConfig
 }
